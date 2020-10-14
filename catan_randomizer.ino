@@ -607,14 +607,87 @@ void draw_hex(int16_t x, int16_t y, uint32_t value, uint16_t number) {
       tft.drawPixel(x+9,y+7,value);
       break;
     case 5:
+      for (int16_t j=7;j<11;j++){
+        tft.drawPixel(x+j,y+3,value);
+      }
+      for (int16_t i=3;i<8;i++){
+        tft.drawPixel(x+7,y+i,value);
+      }
+      tft.drawPixel(x+8,y+7,value);
+      tft.drawPixel(x+9,y+7,value);
+      for (int16_t i=8;i<12;i++){
+        tft.drawPixel(x+10,y+i,value);
+      }
+      tft.drawPixel(x+9,y+12,value);
+      tft.drawPixel(x+8,y+12,value);
+      tft.drawPixel(x+7,y+11,value);
       break;
     case 6:
+      for (int16_t i=4;i<12;i++){
+        tft.drawPixel(x+7,y+i,value);
+      }
+      for (int16_t i=8;i<12;i++){
+        tft.drawPixel(x+10,y+i,value);
+      }
+      tft.drawPixel(x+8,y+3,value);
+      tft.drawPixel(x+9,y+3,value);
+      tft.drawPixel(x+10,y+4,value);
+
+      tft.drawPixel(x+8,y+7,value);
+      tft.drawPixel(x+9,y+7,value);
+
+      tft.drawPixel(x+8,y+12,value);
+      tft.drawPixel(x+9,y+12,value);
       break;
     case 7:
       break;
     case 8:
+      for (int16_t i=4;i<7;i++){
+        tft.drawPixel(x+7,y+i,value);
+      }
+      for (int16_t i=4;i<7;i++){
+        tft.drawPixel(x+11,y+i,value);
+      }
+
+      for (int16_t i=8;i<12;i++){
+        tft.drawPixel(x+7,y+i,value);
+      }
+      for (int16_t i=8;i<12;i++){
+        tft.drawPixel(x+11,y+i,value);
+      }
+
+      for (int16_t j=8;j<11;j++){
+        tft.drawPixel(x+j,y+3);
+      }
+      for (int16_t j=8;j<11;j++){
+        tft.drawPixel(x+j,y+7);
+      }
+      for (int16_t j=8;j<11;j++){
+        tft.drawPixel(x+j,y+12);
+      }
       break;
     default:
+      for (int16_t i=4;i<7;i++){
+        tft.drawPixel(x+7,y+i,value);
+      }
+      for (int16_t i=4;i<7;i++){
+        tft.drawPixel(x+11,y+i,value);
+      }
+
+      tft.drawPixel(x+7,y+11,value);
+      for (int16_t i=8;i<12;i++){
+        tft.drawPixel(x+11,y+i,value);
+      }
+
+      for (int16_t j=8;j<11;j++){
+        tft.drawPixel(x+j,y+3);
+      }
+      for (int16_t j=8;j<11;j++){
+        tft.drawPixel(x+j,y+7);
+      }
+      for (int16_t j=8;j<11;j++){
+        tft.drawPixel(x+j,y+12);
+      }
       break;
   }
 }
